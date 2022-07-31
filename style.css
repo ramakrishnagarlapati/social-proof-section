@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: url('images/bg-pattern-top-mobile.svg') no-repeat top left, url('images/bg-pattern-bottom-mobile.svg') no-repeat right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 90%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info .info-title {
+    color: hsl(300, 43%, 22%);
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+.info .info-text {
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+}
+
+.ratings {
+    margin: 2rem 0;
+}
+
+.rating {
+    background-color: hsl(300, 24%, 96%);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating:last-child {
+    margin-bottom: 0;
+}
+
+.rating .ratings-text {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews .review {
+    padding: 2rem;
+    background-color: hsl(300, 43%, 22%);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    color: whitesmoke;
+}
+
+.reviews .review:last-child {
+    margin-bottom: 0;
+}
+
+.reviews .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-img {
+    margin-right: 1.5rem;
+}
+
+.profile-img img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info .profile-name {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.profile-info .profile-isverified {
+    color: hsl(333, 80%, 67%);
+}
+
+.review-text {
+    margin-top: 1rem;
+}
+
+.review-text p {
+    line-height: 1.2rem;
+}
+
+@media screen and (min-width:650px) {
+    body {
+        background: url('images/bg-pattern-top-desktop.svg') top left no-repeat, url('images/bg-pattern-bottom-desktop.svg') right bottom no-repeat;
+        overflow-x: scroll;
+    }
+
+    main {
+        margin: 3rem 0;
+        width: 100%;
+
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .info {
+        flex-basis: 40%;
+        text-align: start;
+    }
+
+    .info .info-title {
+        font-size: 3.5rem;
+        line-height: 2.8rem;
+    }
+
+    .info .info-text {
+        line-height: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+    .ratings {
+        margin-top: 0;
+        flex-basis: 60%;
+    }
+
+    .ratings .rating {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 25rem;
+        position: relative;
+    }
+
+    .rating .ratings-text {
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+
+    .rating:first-child {
+
+        left: 5em;
+    }
+
+    .rating:nth-of-type(2) {
+        left: 10em;
+    }
+
+    .rating:last-child {
+        left: 15em;
+    }
+
+    .reviews {
+        flex-direction: row;
+        margin-top: 3rem;
+        justify-content: space-between;
+    }
+
+    .review {
+        flex-basis: 30%;
+
+    }
+
+    .review:nth-of-type(2) {
+        margin-top: 2rem;
+    }
+
+    .review:last-child {
+        margin-top: 4rem;
+    }
+
+}
